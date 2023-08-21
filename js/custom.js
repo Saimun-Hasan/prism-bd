@@ -31,6 +31,7 @@
       "Our Products",
       "Our Partners",
       "Contact Us",
+      "Products"
     ];
 
     $("#pagepiling").pagepiling({
@@ -38,7 +39,7 @@
       navigation: true,
       easing: "swing",
       menu: ".navbar-nav",
-      anchors: ["home", "about", "services", "products", "partners", "contact"],
+      anchors: ["home", "about", "services", "products", "partners", "contact", "products"],
       afterRender: function (anchorLink, index) {
         NavbarColor();
       },
@@ -47,7 +48,7 @@
         $(".active .intro").addClass("animate");
         NavbarColor();
       },
-      sectionsColor: ["#fffdea", "#fffdea", "#fffdea", "#fffdea", "#fffdea"],
+      sectionsColor: ["#fffdea", "#fffdea", "#fffdea", "#fffdea", "#fffdea", "white"],
       onLeave: function (index, nextIndex, direction) {
         const $nextSection = $(".pp-section").eq(nextIndex - 1);
         if (!$nextSection.hasClass("loaded")) {
@@ -59,11 +60,11 @@
 
     function NavbarColor() {
       if ($(".pp-section.active").hasClass("navbar-is-white")) {
-        $(".navbar-desctop").addClass("navbar-white");
+        $(".navbar-desktop").addClass("navbar-white");
         $(".progress-nav").addClass("progress-nav-white");
         $(".navbar-bottom").addClass("navbar-bottom-white");
       } else {
-        $(".navbar-desctop").removeClass("navbar-white");
+        $(".navbar-desktop").removeClass("navbar-white");
         $(".progress-nav").removeClass("progress-nav-white");
         $(".navbar-bottom").removeClass("navbar-bottom-white");
       }
@@ -114,6 +115,101 @@
 
     experienceNumber.textContent = yearsOfExperience;
   };
+
+  /*------------------
+    Background Set
+  --------------------*/
+  $('.set-bg').each(function () {
+    var bg = $(this).data('setbg');
+    $(this).css('background-image', 'url(' + bg + ')');
+  });
+
+  //Search Switch
+  $('.search-switch').on('click', function () {
+    $('.search-model').fadeIn(400);
+  });
+
+  $('.search-close-switch').on('click', function () {
+    $('.search-model').fadeOut(400, function () {
+      $('#search-input').val('');
+    });
+  });
+
+
+  // Search functionality
+  $("#searchInput").on("input", function () {
+    var searchTerm = $(this).val().toLowerCase();
+    filterProducts(searchTerm);
+  });
+  var activeCategory = "";
+  // Category filtering toggle
+  $(".category-link").click(function (event) {
+    event.preventDefault();
+    var selectedCategory = $(this).data("category");
+
+    // Check if the clicked category is already active
+    if (selectedCategory === activeCategory) {
+      toggleCategory(""); // Show all categories
+      activeCategory = ""; // Reset active category
+    } else {
+      toggleCategory(selectedCategory);
+      activeCategory = selectedCategory; // Set the active category
+    }
+
+    // Update active class for category links
+    $(".category-link").removeClass("active");
+    $(this).toggleClass("active");
+
+  });
+  // Show all categories button
+  $("#showAllButton").click(function (event) {
+    event.preventDefault();
+    showAllCategories();
+    $(".category-link").removeClass("active");
+  });
+  // Function to filter products by search term
+  function filterProducts(searchTerm) {
+    $(".product__item").each(function () {
+      var itemName = $(this).find("h6").text().toLowerCase();
+      if (itemName.includes(searchTerm)) {
+        $(this).show();
+      } else {
+        $(this).hide();
+      }
+    });
+  }
+  // Function to toggle products by category
+  function toggleCategory(category) {
+    $(".product__item").each(function () {
+      var categoryText = $(this).find(".category").text().toLowerCase();
+      if (category === "" || categoryText.includes(category)) {
+        $(this).show(); // Show products in the selected category or all categories
+      } else {
+        $(this).hide(); // Hide products in other categories
+      }
+    });
+  }
+  function showAllCategories() {
+    $(".product__item").show(); // Show all products
+  }
+
+  var urlParams = new URLSearchParams(window.location.search);
+  var selectedCategory = urlParams.get('category');
+  toggleCategory(selectedCategory);
+  if (selectedCategory) {
+    toggleCategory(selectedCategory);
+    $(".category-link[data-category='" + selectedCategory + "']").addClass("active");
+  }
+  function toggleCategory(category) {
+    $(".product__item").each(function () {
+      var categoryText = $(this).find(".category").text().toLowerCase();
+      if (categoryText.includes(category)) {
+        $(this).show(); 
+      } else {
+        $(this).hide();
+      }
+    });
+  }
 
   /* Extra */
   $(".navbar-nav li").click(function () {
