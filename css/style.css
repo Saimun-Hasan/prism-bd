@@ -950,7 +950,7 @@ h1 + .line {
 }
 
 .pp-section {
-  background: #fff;
+  background: white;
   background-position: 50%;
   background-size: cover;
   padding: 8rem 0 6rem;
@@ -1590,12 +1590,22 @@ h1 + .line {
 
 .it
 {
-  background-image:url('../img/bg/test.webp')
+  background-image:url('../img/bg/test.png')
 }
 
 .it.visible
 {
-  background-image:url('../img/bg/test.webp')
+  background-image:url('../img/bg/test.png')
+}
+
+.services-it
+{
+  background-image:url('../img/bg/bg_services.jpg')
+}
+
+.services-it.visible
+{
+  background-image:url('../img/bg/bg_services.jpg')
 }
 
 
@@ -2739,4 +2749,12 @@ h1 + .line {
 {
   padding: 10px;
   background-color: transparent;
+}
+
+.custom-p{
+  padding: 15px;
+  background: #0d4b9933;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  color: black;
 }

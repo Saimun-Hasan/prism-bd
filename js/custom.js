@@ -22,7 +22,7 @@
     }
   });
 
-  /* Full page scroll*/
+  /* Full page scroll Clothing*/
   if ($("#pagepiling").length > 0) {
     const tooltips = [
       "Home",
@@ -31,7 +31,6 @@
       "Our Products",
       "Our Partners",
       "Contact Us",
-      "Products"
     ];
 
     $("#pagepiling").pagepiling({
@@ -39,7 +38,7 @@
       navigation: true,
       easing: "swing",
       menu: ".navbar-nav",
-      anchors: ["home", "about", "services", "products", "partners", "contact", "products"],
+      anchors: ["home", "about", "services", "products", "partners", "contact"],
       afterRender: function (anchorLink, index) {
         NavbarColor();
       },
@@ -48,7 +47,103 @@
         $(".active .intro").addClass("animate");
         NavbarColor();
       },
-      sectionsColor: ["#fffdea", "#fffdea", "#fffdea", "#fffdea", "#fffdea", "white"],
+      sectionsColor: ["#fffdea", "#fffdea", "#fffdea","white","white", "#fffdea", "#fffdea", "white"],
+      onLeave: function (index, nextIndex, direction) {
+        const $nextSection = $(".pp-section").eq(nextIndex - 1);
+        if (!$nextSection.hasClass("loaded")) {
+          $nextSection.removeClass("initial-hidden loaded");
+          $nextSection.addClass("loaded");
+        }
+      },
+    });
+
+    function NavbarColor() {
+      if ($(".pp-section.active").hasClass("navbar-is-white")) {
+        $(".navbar-desktop").addClass("navbar-white");
+        $(".progress-nav").addClass("progress-nav-white");
+        $(".navbar-bottom").addClass("navbar-bottom-white");
+      } else {
+        $(".navbar-desktop").removeClass("navbar-white");
+        $(".progress-nav").removeClass("progress-nav-white");
+        $(".navbar-bottom").removeClass("navbar-bottom-white");
+      }
+    }
+  }
+
+  /* Full page scroll Clothing*/
+  if ($("#pagepiling_eco").length > 0) {
+    const tooltips = [
+      "Home",
+      "About Us",
+      "Our Services",
+      "Our Products",
+      "Our Partners",
+      "Contact Us",
+    ];
+
+    $("#pagepiling_eco").pagepiling({
+      scrollingSpeed: 700,
+      navigation: true,
+      easing: "swing",
+      menu: ".navbar-nav",
+      anchors: ["home", "about", "services", "products", "partners", "contact"],
+      afterRender: function (anchorLink, index) {
+        NavbarColor();
+      },
+      afterLoad: function (anchorLink, index) {
+        $(".pp-section .intro").removeClass("animate");
+        $(".active .intro").addClass("animate");
+        NavbarColor();
+      },
+      sectionsColor: ["#fffdea", "#fffdea", "#fffdea","white","white", "#fffdea", "#fffdea", "white"],
+      onLeave: function (index, nextIndex, direction) {
+        const $nextSection = $(".pp-section").eq(nextIndex - 1);
+        if (!$nextSection.hasClass("loaded")) {
+          $nextSection.removeClass("initial-hidden loaded");
+          $nextSection.addClass("loaded");
+        }
+      },
+    });
+
+    function NavbarColor() {
+      if ($(".pp-section.active").hasClass("navbar-is-white")) {
+        $(".navbar-desktop").addClass("navbar-white");
+        $(".progress-nav").addClass("progress-nav-white");
+        $(".navbar-bottom").addClass("navbar-bottom-white");
+      } else {
+        $(".navbar-desktop").removeClass("navbar-white");
+        $(".progress-nav").removeClass("progress-nav-white");
+        $(".navbar-bottom").removeClass("navbar-bottom-white");
+      }
+    }
+  }
+
+  /* Full page scroll IT*/
+  if ($("#pagepiling_it").length > 0) {
+    const tooltips = [
+      "Home",
+      "About Us",
+      "Our Services",
+      "Security",
+      "Quality Control",
+      "Contact Us",
+    ];
+
+    $("#pagepiling_it").pagepiling({
+      scrollingSpeed: 700,
+      navigation: true,
+      easing: "swing",
+      menu: ".navbar-nav",
+      anchors: ["home", "about", "services", "security", "quality_control", "contact"],
+      afterRender: function (anchorLink, index) {
+        NavbarColor();
+      },
+      afterLoad: function (anchorLink, index) {
+        $(".pp-section .intro").removeClass("animate");
+        $(".active .intro").addClass("animate");
+        NavbarColor();
+      },
+      sectionsColor: ["#fffdea", "#fffdea", "#fffdea","white","white", "#fffdea", "#fffdea", "white"],
       onLeave: function (index, nextIndex, direction) {
         const $nextSection = $(".pp-section").eq(nextIndex - 1);
         if (!$nextSection.hasClass("loaded")) {
@@ -216,6 +311,12 @@
     const anchor = $(this).data("menuanchor");
     if (anchor) {
       $("#pagepiling").pagepiling.moveTo(anchor);
+    }
+    if (anchor) {
+      $("#pagepiling_eco").pagepiling.moveTo(anchor);
+    }
+    if (anchor) {
+      $("#pagepiling_it").pagepiling.moveTo(anchor);
     }
   });
   $('[data-toggle="tooltip"]').tooltip();
