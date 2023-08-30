@@ -1540,7 +1540,7 @@ h1 + .line {
 
 .home
 {
-  background-image:url('../img/bg/bg_lazy.webp')
+  background-image:url('../img/bg/bg.webp')
 }
 
 .home.visible
@@ -1567,6 +1567,37 @@ h1 + .line {
 {
   background-image:url('../img/bg/contact.webp')
 }
+
+.eco
+{
+  background-image:url('../img/bg/bg-eco.webp')
+}
+
+.eco.visible
+{
+  background-image:url('../img/bg/bg-eco.webp')
+}
+
+.services-eco
+{
+  background-image:url('../img/bg/services-eco.webp')
+}
+
+.services-eco.visible
+{
+  background-image:url('../img/bg/services-eco.webp')
+}
+
+.it
+{
+  background-image:url('../img/bg/test.webp')
+}
+
+.it.visible
+{
+  background-image:url('../img/bg/test.webp')
+}
+
 
 .overlay {
   width: 100%;
