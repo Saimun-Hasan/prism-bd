@@ -14,6 +14,15 @@
 
 	<title>Prism Venture</title>
 	<link rel="icon" type="image/x-icon" href="img/prism-bd.png">
+	<style>
+		.dropdown-menu {
+			display: none;
+		}
+
+		.btn-group:hover .dropdown-menu {
+			display: block;
+		}
+	</style>
 </head>
 
 <body>
@@ -84,20 +93,21 @@
 
 		<!-- head -->
 		<section id="home"
-			class="navbar-is-white text-white pp-scrollable d-flex align-items-center section position-absolute lazy-background home"
+			class="text-white pp-scrollable d-flex align-items-center section position-absolute lazy-background home"
 			role="main">
 			<div class="intro">
 				<div class="scroll-wrap">
 					<div class="container-fluid">
 						<div class="row">
 							<div class="col-lg-1 col-xl-6"></div>
-							<div class="col-lg-6 col-xl-6">
+							<div class="col-lg-6 col-xl-6"
+								style="background-color: #000000ad; padding: 25px; border-radius: 10px;">
 								<h1 class="text-white">
 									<span class="text-primary text-typed a-typed a-typed-about">
 										Prism Venture
 									</span>
 									<br>
-									Elevating Fashion Boldly!
+									Where Professionalism Meets Comfort
 								</h1>
 								<div class="line"></div>
 							</div>
@@ -119,12 +129,10 @@
 									About
 									<span class="text-secondary">Prism</span>
 								</h2>
-								<div class="mt-5 pt-2">
+								<div class="mt-5" style="padding: 1rem;">
 									<p>
-										Welcome to Prism – where the power of customer-driven innovation meets
-										the finesse of fashion. Our vision is a seamless
-										<span class="text-secondary">“Total Customer Solution.”</span> and
-										we're here to redefine your garment sourcing experience.
+										Welcome to Prism Venture – a buying house with a vision that aims to change the
+										perspective of your garment sourcing experience.
 									</p>
 									<p>
 										Embarking on a global quest, we curate the finest shell fabrics and tiniest
@@ -132,18 +140,18 @@
 										tailored to your needs.
 									</p>
 									<p>
-										Our team is a force of expertise, from visionary merchandisers to
-										detail-obsessed quality technicians, working cohesively to execute orders of any
-										scale flawlessly.
+										Our team is built with experienced merchandisers and a hard working QC team, who
+										work to maintain the required AQL and operate cohesively to satisfy our
+										customers’ needs to execute orders of all sizes.
 									</p>
 									<p>
-										But we're not just about products; we're about forging secure business
-										partnerships. We've woven a foundation of reliability, ensuring risk-free
-										sourcing of fashion garments from Bangladesh.
+										Alongside providing the best products, we also maintain committed business
+										partnerships. We have built a foundation of reliable sourcing of fashion
+										garments from Bangladesh, that too at great value.
 									</p>
 									<p>
-										Join us in this journey where professionalism and excitement intertwine. Welcome
-										to Prism Venture – <span class="text-secondary">Crafting Success, One Stitch at a Time.</span>
+										Join us in this journey to experience a partnership where professionalism meets
+										comfort!
 									</p>
 								</div>
 							</div>
@@ -169,7 +177,7 @@
 			<div class="overlay" style="position: absolute;">
 				<div class="intro">
 					<div class="scroll-wrap">
-						<div class="container">
+						<div class="container" style="padding: 1.5rem;">
 							<h2 class="text-white mb-0">
 								From Vision to Reality
 								<span class="text-primary">Unraveling Our Services</span>
@@ -327,7 +335,8 @@
 												</h4>
 											</div>
 											<div class="col-md-6">
-												Inspection by any International reputed 3rd party e.g. SGS/BV/Hohenstein is workable.
+												Inspection by any International reputed 3rd party e.g. SGS/BV/Hohenstein
+												is workable.
 											</div>
 										</div>
 									</div>
@@ -362,17 +371,12 @@
 											<div class="card-body">
 												<h4>Woven</h4>
 												<p class="card-text text-white">
-													Discover a diverse range of woven apparel for men, women, and
-													kids
-													at Prism Venture. From sleek suits and blazers to comfortable
-													denims
-													and casual pants, our collection boasts a variety of fabrics and
-													washes, creating stylish and trendy outfits. Explore formal and
-													casual options, including jackets, skirts, and shirts for women,
-													and
-													adorable denims and shirts with unique prints and washes for
-													kids.
-													Elevate your fashion game with our exquisite woven garments!
+													At Prism, you can discover a diverse range of woven apparel fit for
+													men, women, and kids. From sleek suits and jackets to all kinds of
+													denims, casual pants and skirts. Our collection boasts a variety of
+													fabrics and washes. Explore both formal and casual shorts for
+													everybody and adorable denims and shorts with unique prints and
+													washes for the little ones.
 												</p>
 											</div>
 											<div class="card-footer">
@@ -382,12 +386,13 @@
 														Woven Products
 													</a>
 													<a type="button"
-														class="btn btn-primary dropdown-toggle dropdown-toggle-split"
+														class="btn btn-primary dropdown-toggle dropdown-toggle-split dropdown"
 														data-toggle="dropdown" aria-haspopup="true"
-														aria-expanded="false">
+														aria-expanded="false" id="dropdownMenu">
 														<span class="sr-only">Toggle Dropdown</span>
 													</a>
-													<div class="dropdown-menu" style="background-color: #fff7a6;">
+													<div class="dropdown-menu col-12"
+														style="background-color: #fff7a6;">
 														<a class="dropdown-item" href="products.html?category=shirts">
 															Shirts
 														</a>
@@ -408,21 +413,14 @@
 											<div class="card-body">
 												<h4>Knit</h4>
 												<p class="card-text text-white">
-													Indulge in comfort and style with our versatile knitwear
-													collection
-													at Prism Venture. For men, women, and kids, we offer a wide
-													range of
-													tees, polos, sweatshirts, hoodies, and more, crafted from
-													premium
-													fabrics like Single jersey, Double jersey, Rib, Pique, Lacoste,
-													French terry, Fleece, Pima cotton, Cotton modal, and various
-													blends.
-													Our knitwear comes in an array of prints, embroideries, and
-													washes,
-													ensuring fashion-forward choices for every occasion. Embrace
-													luxury
-													and coziness with our curated selection of boxers, underwear,
-													tang
+													Indulge in comfort and style with our versatile knitwear collection
+													here. For men, women, and kids, we offer a wide range of tees,
+													polos, sweatshirts, hoodies, and more, crafted from premium fabrics
+													like Single jersey, Double jersey, Interlock, Rib, Pique, Lacoste,
+													French terry, Fleece, Pima cotton, Cotton modal, and various blends.
+													Our knitwear comes in an array of prints, embroideries, and washes,
+													ensuring fashion-forward choices for every occasion. Embrace luxury
+													and coziness with our curated selection of boxers, underwear, tank
 													tops, panties, pajamas, and sleepwear.
 												</p>
 											</div>
@@ -435,10 +433,11 @@
 													<a type="button"
 														class="btn btn-primary dropdown-toggle dropdown-toggle-split"
 														data-toggle="dropdown" aria-haspopup="true"
-														aria-expanded="false">
+														aria-expanded="false" id="knitDropdown">
 														<span class="sr-only">Toggle Dropdown</span>
 													</a>
-													<div class="dropdown-menu">
+													<div class="dropdown-menu col-12"
+														style="background-color: #fff7a6;">
 														<a class="dropdown-item" href="products.html?category=tshirts">
 															T-shirts
 														</a>
@@ -446,7 +445,7 @@
 															Polo
 														</a>
 														<a class="dropdown-item" href="products.html?category=jersey">
-															Single & Duble Jersey
+															Single & Double Jersey
 														</a>
 													</div>
 												</div>
@@ -460,14 +459,13 @@
 												<h4>Sweater</h4>
 												<p class="card-text text-white">
 													Wrap yourself in warmth and elegance with our exquisite sweater
-													collection at Prism Venture. From cozy sweaters and jumpers to
-													versatile vests and cardigans, our range offers a variety of
-													gauges
-													and intricate designs like jacquard and intarsia. Crafted from
-													premium materials including cotton, acrylic, wool, merino wool,
-													tape, boucle, and chenille, our sweaters are a perfect blend of
-													comfort and style. Embrace the beauty of handcrafted knits and
-													elevate your winter wardrobe with our luxurious selection.
+													collection. From cozy sweaters and jumpers to versatile vests and
+													cardigans, our range offers a variety of gauges and intricate
+													designs like jacquard and intarsia. Our sweaters are a perfect blend
+													of comfort and style, crafted from premium materials including
+													cotton, acrylic, wool, merino wool, tape, boucle, and chenille.
+													Embrace the beauty of handcrafted knits and elevate your winter
+													wardrobe with our luxurious selection.
 												</p>
 											</div>
 											<div class="card-footer">
@@ -530,7 +528,7 @@
 						<div class="row">
 							<div class="col-xl-6"></div>
 							<div class="col-xl-6"
-								style="background-color: #0000009e; padding: 20px; border-radius: 10px;">
+								style="background-color: #000000cf; padding: 20px; border-radius: 10px;">
 								<div class="row">
 									<div class="col-lg-12">
 										<div class="footer__about">
@@ -543,9 +541,9 @@
 										<div class="footer__widget">
 											<h6>Products</h6>
 											<ul>
-												<li><a href="javascript:void(0)">Woven</a></li>
-												<li><a href="javascript:void(0)">Knit</a></li>
-												<li><a href="javascript:void(0)">Sweater</a></li>
+												<li><a href="products.html?category=woven">Woven</a></li>
+												<li><a href="products.html?category=knit">Knit</a></li>
+												<li><a href="jproducts.html?category=sweaters">Sweater</a></li>
 											</ul>
 										</div>
 									</div>
@@ -619,6 +617,65 @@
 	<script src="js/owl.carousel.min.js"></script>
 	<script src="js/custom.js"></script>
 	<script src="js/lazyload.js"></script>
+	<script>
+		var dropdownMenu = document.getElementById('dropdownMenu');
+		var dropdownVisible = false;
+
+		// Toggle the dropdown menu on click
+		dropdownMenu.addEventListener('click', function (event) {
+			event.stopPropagation();
+			document.querySelector('.btn-group .dropdown-menu').style.display = dropdownVisible ? 'none' : 'block';
+			dropdownVisible = !dropdownVisible;
+		});
+
+		// Show the dropdown menu on hover and hide on mouseleave
+		var btnGroup = document.querySelector('.btn-group');
+		btnGroup.addEventListener('mouseenter', function () {
+			document.querySelector('.btn-group .dropdown-menu').style.display = 'block';
+		});
+
+		btnGroup.addEventListener('mouseleave', function () {
+			document.querySelector('.btn-group .dropdown-menu').style.display = 'none';
+		});
+
+		// Close the dropdown menu when clicking outside of it
+		window.addEventListener('click', function (event) {
+			if (!btnGroup.contains(event.target)) {
+				document.querySelector('.btn-group .dropdown-menu').style.display = 'none';
+				dropdownVisible = false;
+			}
+		});
+	</script>
+
+	<script>
+		var knitDropdown = document.getElementById('knitDropdown');
+		var knitDropdownVisible = false;
+
+		// Toggle the knit dropdown menu on click
+		knitDropdown.addEventListener('click', function (event) {
+			event.stopPropagation();
+			document.querySelector('.btn-group .dropdown-menu').style.display = knitDropdownVisible ? 'none' : 'block';
+			knitDropdownVisible = !knitDropdownVisible;
+		});
+
+		// Show the knit dropdown menu on hover and hide on mouseleave
+		var knitBtnGroup = document.querySelector('.btn-group');
+		knitBtnGroup.addEventListener('mouseenter', function () {
+			document.querySelector('.btn-group .dropdown-menu').style.display = 'block';
+		});
+
+		knitBtnGroup.addEventListener('mouseleave', function () {
+			document.querySelector('.btn-group .dropdown-menu').style.display = 'none';
+		});
+
+		// Close the knit dropdown menu when clicking outside of it
+		window.addEventListener('click', function (event) {
+			if (!knitBtnGroup.contains(event.target)) {
+				document.querySelector('.btn-group .dropdown-menu').style.display = 'none';
+				knitDropdownVisible = false;
+			}
+		});
+	</script>
 </body>
 
 </html>
