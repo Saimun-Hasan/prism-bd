@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Prism Venture BD">
+	<meta name="author" content="prims-bd">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/jquery.pagepiling.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/fontawesome.css">
+
+	<title>Prism Venture</title>
+	<link rel="icon" type="image/x-icon" href="img/prism-bd.png">
+	<style>
+		.active {
+			font-weight: bold;
+		}
+	</style>
+</head>
+
+<body>
+
+	<!-- Loader -->
+	<div class="loader">
+		<div class="spinner">
+			<div class="double-bounce1"></div>
+			<div class="double-bounce2"></div>
+		</div>
+	</div>
+
+	<!-- Click capture -->
+	<div class="click-capture"></div>
+
+	<!-- Navbar -->
+	<nav class="navbar navbar-desktop" style="background-color: white;">
+		<div class="position-relative w-100">
+
+			<!-- Brand-->
+			<a class="navbar-brand" href="javascript:void(0)">
+				<!-- <img data-src="img/prism-bd.png" alt="" class="img-fluid lazyload" width="100px" height="100px"> -->
+			</a>
+			<div class="container d-block">
+				<span class="phone ml-5 my-0 d-none d-md-block">
+					<a href="tel:+880-02-8417590">+880-02-8417590</a>
+				</span>
+				<span class="phone my-0 d-none d-md-block">
+					<a href="tel:+8801713363842">+8801713363842</a>
+				</span>
+				<span class="email my-0 d-none d-md-block">
+					saadi@prismbd.net
+				</span>
+			</div>
+
+			<!-- Toggler -->
+			<button class="toggler">
+				<span class="toggler-icon"></span>
+				<span class="toggler-icon"></span>
+				<span class="toggler-icon"></span>
+			</button>
+		</div>
+	</nav>
+
+	<nav class="navbar-bottom">
+		<!-- Copyright -->
+		<div class="copy d-none d-sm-block">© <a href="https://www.linkedin.com/in/saimun-hasan" target="_blank">Saimun Hasan</a>
+. 2023.</div>
+	</nav>
+
+	<!-- Navbar Mobile -->
+	<nav class="navbar navbar-mobile">
+		<img data-src="img/cancel.svg" class="close img-fluid lazyload" name="close-outline" height="35px" width="35px">
+
+		<ul class="navbar-nav navbar-nav-mobile">
+			<li><a class="nav-link" href="index.html">Main Page</a></li>
+			<li><a class="nav-link" data-menuanchor="home" href="clothing.html#home">Home</a></li>
+			<li><a class="nav-link" data-menuanchor="about" href="clothing.html#about">About</a></li>
+			<li><a class="nav-link" data-menuanchor="services" href="clothing.html#services">Services</a></li>
+			<li class="active"><a class="nav-link active" data-menuanchor="products" href="clothing.html#products">Products</a></li>
+			<li><a class="nav-link" data-menuanchor="partners" href="clothing.html#partners">Partners</a></li>
+			<li><a class="nav-link" data-menuanchor="contact" href="clothing.html#contact">Contact</a></li>
+		</ul>
+		<div class="navbar-mobile-footer text-dark">
+			<p>© <a href="https://www.linkedin.com/in/saimun-hasan" target="_blank">Saimun Hasan</a>
+. 2023. All Rights Reserved.</p>
+		</div>
+	</nav>
+
+	<div id="pagepiling">
+		<section id="products" class="navbar-is-white pp-scrollable d-flex align-items-center position-absolute">
+			<div class="intro">
+				<div class="scroll-wrap">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-3">
+								<div class="shop__sidebar">
+									<div class="shop__sidebar__search">
+										<form action="#">
+											<input type="text" placeholder="Search..." id="searchInput">
+											<button type="submit"><span class="icon_search"></span></button>
+										</form>
+										<button id="showAllButton" class="btn btn-primary col-12 mt-2">Show All</button>
+									</div>
+									<div class="shop__sidebar__accordion">
+										<div class="accordion" id="accordionExample">
+											<div class="card product-card">
+												<div class="card-heading">
+													<a data-toggle="collapse" data-target="#collapseOne">
+														Woven
+													</a>
+												</div>
+
+												<div id="collapseOne" class="collapse show"
+													data-parent="#accordionExample">
+													<div class="card-body">
+														<div class="shop__sidebar__categories">
+															<ul class="nice-scroll">
+																<li><a href="javascript:void(0)" class="category-link"
+																		data-category="shirts">Shirts</a></li>
+																<li><a href="javascript:void(0)" class="category-link"
+																		data-category="denims">Denims</a></li>
+																<li><a href="javascript:void(0)" class="category-link"
+																		data-category="suites">Suites</a></li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+
+
+											<div class="card product-card">
+												<div class="card-heading">
+													<a data-toggle="collapse" data-target="#collapseTwo">
+														Knit
+													</a>
+												</div>
+												<div id="collapseTwo" class="collapse show"
+													data-parent="#accordionExample">
+													<div class="card-body">
+														<div class="shop__sidebar__brand">
+															<ul>
+																<li><a href="javascript:void(0)" class="category-link"
+																		data-category="tshirts">T-Shirt</a></li>
+																<li><a href="javascript:void(0)" class="category-link"
+																		data-category="polo">Polo</a></li>
+																<li><a href="javascript:void(0)" class="category-link"
+																		data-category="jersey">Jersey</a></li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="card product-card">
+												<div class="card-heading">
+													<a data-toggle="collapse" data-target="#collapseThree">
+														Sweater
+													</a>
+												</div>
+												<div id="collapseThree" class="collapse show"
+													data-parent="#accordionExample">
+													<div class="card-body">
+														<div class="shop__sidebar__price">
+															<ul>
+																<li><a href="javascript:void(0)" class="category-link"
+																		data-category="sweaters">Sweaters</a></li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-9">
+								<div class="row" id="productContainer">
+									<!-- Woven Shirts -->
+									<div class="col-lg-4 col-md-6 col-sm-6 product__item">
+										<div class="product__item__pic set-bg" data-setbg="img/products/shirts/01.jpg">
+										</div>
+										<div>
+											<h6 class="category d-none">Shirts</h6>
+											<h6 class="category d-none">woven</h6>
+											<h6>CHAMBERS STRIPE DRESS SHIRT - Shirts</h6>
+										</div>
+									</div>
+
+									<div class="col-lg-4 col-md-6 col-sm-6 product__item">
+										<div class="product__item__pic set-bg" data-setbg="img/products/shirts/02.jpg">
+										</div>
+										<div>
+											<h6 class="category d-none">Shirts</h6>
+											<h6 class="category d-none">woven</h6>
+											<h6>CHAMBERS STRIPE DRESS SHIRT - NAVY</h6>
+										</div>
+									</div>
+
+									<div class="col-lg-4 col-md-6 col-sm-6 product__item">
+										<div class="product__item__pic set-bg" data-setbg="img/products/shirts/03.jpg">
+										</div>
+										<div>
+											<h6 class="category d-none">Shirts</h6>
+											<h6 class="category d-none">woven</h6>
+											<h6>TONAL WIDE STRIPE DRESS SHIRT</h6>
+										</div>
+									</div>
+
+									<div class="col-lg-4 col-md-6 col-sm-6 product__item">
+										<div class="product__item__pic set-bg" data-setbg="img/products/shirts/04.jpg">
+										</div>
+										<div>
+											<h6 class="category d-none">Shirts</h6>
+											<h6 class="category d-none">woven</h6>
+											<h6>SHADOW STRIPE DRESS SHIRT - PINK</h6>
+										</div>
+									</div>
+
+									<div class="col-lg-4 col-md-6 col-sm-6 product__item">
+										<div class="product__item__pic set-bg" data-setbg="img/products/shirts/05.jpg">
+										</div>
+										<div>
+											<h6 class="category d-none">Shirts</h6>
+											<h6 class="category d-none">woven</h6>
+											<h6>SHADOW STRIPE DRESS SHIRT - TAN</h6>
+										</div>
+									</div>
+									<!-- Woven Shirts -->
+
+									<!-- Woven Denims -->
+									<div class="col-lg-4 col-md-6 col-sm-6 product__item">
+										<div class="product__item__pic set-bg" data-setbg="img/products/denims/01.jpg">
+										</div>
+										<div>
+											<h6 class="category d-none">Denims</h6>
+											<h6 class="category d-none">woven</h6>
+											<h6>SOLID DENIM PANT</h6>
+										</div>
+									</div>
+									<!-- Woven Denims -->
+
+									<!-- Woven Suites -->
+									<div class="col-lg-4 col-md-6 col-sm-6 product__item">
+										<div class="product__item__pic set-bg" data-setbg="img/products/suites/01.jpg">
+										</div>
+										<div>
+											<h6 class="category d-none">Suites</h6>
+											<h6 class="category d-none">woven</h6>
+											<h6>HERRINGBONE VESTED SUIT</h6>
+										</div>
+									</div>
+									<!-- Woven Suites -->
+
+
+									<!-- Knit Tshirt -->
+									<div class="col-lg-4 col-md-6 col-sm-6 product__item">
+										<div class="product__item__pic set-bg" data-setbg="img/products//tshirt/01.jpg">
+										</div>
+										<div>
+											<h6 class="category d-none">T-Shirt</h6>
+											<h6 class="category d-none">knit</h6>
+											<h6>Tshirt</h6>
+										</div>
+									</div>
+									<!-- Knit Tshirt -->
+
+									<div class="col-lg-4 col-md-6 col-sm-6 product__item">
+										<div class="product__item__pic set-bg" data-setbg="img/products/shirts/02.jpg">
+										</div>
+										<div>
+											<h6 class="category d-none">Polo</h6>
+											<h6 class="category d-none">knit</h6>
+											<h6>CHAMBERS STRIPE DRESS SHIRT - polo</h6>
+										</div>
+									</div>
+
+									<div class="col-lg-4 col-md-6 col-sm-6 product__item">
+										<div class="product__item__pic set-bg" data-setbg="img/products/shirts/02.jpg">
+										</div>
+										<div>
+											<h6 class="category d-none">jersey</h6>
+											<h6 class="category d-none">knit</h6>
+											<h6>CHAMBERS STRIPE DRESS SHIRT - jersey</h6>
+										</div>
+									</div>
+
+									<div class="col-lg-4 col-md-6 col-sm-6 product__item">
+										<div class="product__item__pic set-bg" data-setbg="img/products/shirts/02.jpg">
+										</div>
+										<div>
+											<h6 class="category d-none">sweater</h6>
+											<h6 class="category d-none">sweater</h6>
+											<h6>CHAMBERS STRIPE DRESS SHIRT - sweater</h6>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<!-- Scrollbar -->
+	<div class="progress-nav">
+		<ul class="navbar-nav">
+			<li data-menuanchor="products" class="custom-tooltip" data-toggle="tooltip" data-placement="left"
+				title="products">
+			</li>
+		</ul>
+	</div>
+
+
+	<!-- Optional JavaScript -->
+	<script src="js/jquery-1.12.4.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/jquery.pagepiling.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/custom.js"></script>
+	<script src="js/lazyload.js"></script>
+	<script>
+	</script>
+</body>
+
+</html>
